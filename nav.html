@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta tags -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+
+
+    <!-- Fav and Title -->
+    <link rel="icon" href="/static/halfmoon/img/halfmoon-fav-alt.png">
+    <title>Page sections demo - Halfmoon</title>
+
+    <!-- Halfmoon -->
+    <link href="https://cdn.jsdelivr.net/npm/halfmoon@1.1.1/css/halfmoon.min.css" rel="stylesheet" />
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <!-- Roboto font (Used when Apple system fonts are not available) -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body class=" with-custom-webkit-scrollbars with-custom-css-scrollbars">
+
+    <!-- Page wrapper start -->
+    <div id="page-wrapper" class="page-wrapper with-navbar with-sidebar " data-sidebar-type="overlayed-all">
+
+        <!-- Navbar start -->
+        <nav class="navbar">
+            <div class="navbar-content">
+                <button id="toggle-sidebar-btn" class="btn btn-action" type="button" onclick="halfmoon.toggleSidebar()">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                </button>
+            </div>
+            <a href="#" class="navbar-brand ml-10 ml-sm-20">
+                <img src="images/logo.png" alt="fake-logo">
+                <span class="d-sm-flex">Vibin</span>
+            </a>
+            <br>
+        </nav>
+        <!-- Navbar end -->
+
+        <!-- Sidebar overlay -->
+        <div class="sidebar-overlay" onclick="halfmoon.toggleSidebar()"></div>
+
+        <!-- Sidebar start -->
+        <div class="sidebar" style="width: 200px;">
+            <div class="sidebar-menu">
+                <a href="#" class="sidebar-brand">
+                    <img src="images/logo.png" alt="...">
+                    Vibin
+                </a>
+                <a href="#" class="sidebar-link sidebar-link-with-icon ">
+                    <span class="sidebar-icon">
+                        <iconify-icon icon="material-symbols:home-rounded"></iconify-icon>
+                    </span>
+                    Home
+                </a>
+                <a href="#" class="sidebar-link sidebar-link-with-icon">
+                    <span class="sidebar-icon">
+                        <iconify-icon icon="mdi:world"></iconify-icon>
+                    </span>
+                    Places
+                </a>
+                <a href="#" class="sidebar-link sidebar-link-with-icon">
+                    <span class="sidebar-icon">
+                        <iconify-icon icon="tabler:ticket"></iconify-icon>
+                    </span>
+                    Plans
+                </a>
+                <a href="#" class="sidebar-link sidebar-link-with-icon">
+                    <span class="sidebar-icon">
+                        <iconify-icon icon="gridicons:create"></iconify-icon>
+                    </span>
+                    Create
+                </a>
+                <a href="#" class="sidebar-link sidebar-link-with-icon">
+                    <span class="sidebar-icon">
+                        <iconify-icon icon="mdi:face-man-profile"></iconify-icon>
+                    </span>
+                    Profile
+                </a>
+                <a href="#" class="sidebar-link sidebar-link-with-icon">
+                    <span class="sidebar-icon">
+                        <iconify-icon icon="uil:info-circle"></iconify-icon>
+                    </span>
+                    About
+                </a>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <a href="#" class="sidebar-link sidebar-link-with-icon">
+                    <span class="sidebar-icon">
+                        <iconify-icon icon="uil:signout"></iconify-icon>
+                    </span>
+                    Logout
+                </a>
+            </div>
+        </div>
+        <!-- Sidebar end -->
+
+
+        <!-- Content wrapper start -->
+        <div class="content-wrapper">
+            <div class="container-fluid">
+                <div class="row row-eq-spacing-lg"></div>
+
+                <!-- Halfmoon JS -->
+                <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/halfmoon@1.1.1/js/halfmoon.min.js"></script>
+
+                <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js"></script>
+                <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+                <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.js"></script>
+
+                <script>
+
+                    const firebaseConfig = {
+                        apiKey: "AIzaSyBUdp28x94156RaHVBOZWV_flZ2MlHy2EM",
+                        authDomain: "vibin-436a7.firebaseapp.com",
+                        projectId: "vibin-436a7",
+                        storageBucket: "vibin-436a7.appspot.com",
+                        messagingSenderId: "932607890943",
+                        appId: "1:932607890943:web:d0a03ef35385fda1b403ca",
+                        measurementId: "G-54J34FWP1C"
+                    };
+                    // Initialize Firebase
+                    let app = firebase.initializeApp(firebaseConfig);
+
+                    const db = firebase.firestore();
+                    const placesCollection = db.collection("places");
+
+                    function showplaces(places) {
+                        document.querySelector(".places").innerHTML = ""
+                        places.forEach((place) => {
+
+
+                            document.querySelector(".places").innerHTML += `    <div class="rounded w-300 mw-full m-20 d-inline-flex">
+        <div class=""> <!-- p-0 = padding: 0 -->
+            <img src="${place.item.img[0]}" class="img-fluid rounded" alt="...">
+            <div class=" m-5 d-inline-block w-three-quarter text-truncate ">
+                <p class=" m-0 font-weight-bolder font-size-20">
+                    ${place.item.Name}
+                </p>
+                <p style="color: #3CA6B9;" class="font-size-14 mt-0 mb-0 font-weight-semi-bold">
+                    ${place.item.Location}
+                </p>
+            </div>
+        </div>
+    </div>`
+
+                        });
+                    }
+                    placesCollection.limit(3).get().then((querySnapshot) => {
+                        const alllocations = []
+                        querySnapshot.forEach((doc) => {
+                            console.log(doc.id, " => ", doc.data());
+                            const place = doc.data()
+                            alllocations.push(place)
+
+                        });
+
+                        const options = {
+                            keys: [
+                                "Name",
+                                "Location"
+                            ]
+                        };
+                        console.log(alllocations)
+                        const fuse = new Fuse(alllocations, options);
+                        showplaces(fuse.search('india'))
+                    });
+                </script>
+
+</body>
+
+</html>

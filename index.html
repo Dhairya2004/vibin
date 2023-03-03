@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta tags -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+
+
+    <!-- Fav and Title -->
+    <link rel="icon" href="/static/halfmoon/img/halfmoon-fav-alt.png">
+    <title>Page sections demo - Halfmoon</title>
+
+    <!-- Halfmoon -->
+    <link href="https://cdn.jsdelivr.net/npm/halfmoon@1.1.1/css/halfmoon.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body class=" with-custom-webkit-scrollbars with-custom-css-scrollbars">
+
+    <!-- Page wrapper start -->
+    <div id="page-wrapper" class="page-wrapper with-navbar with-sidebar " data-sidebar-type="overlayed-all">
+
+        <!-- Navbar start -->
+        <nav class="navbar">
+            <div class="navbar-content">
+                <button id="toggle-sidebar-btn" class="btn btn-action" type="button" onclick="halfmoon.toggleSidebar()">
+                    <iconify-icon icon="pajamas:hamburger"></iconify-icon>
+                </button>
+            </div>
+            <a href="index.html" class="navbar-brand ml-10 ml-sm-20">
+                <img src="images/logo.png" alt="fake-logo">
+                <span class="d-sm-flex font-weight-bold">Vibin</span>
+            </a>
+            <br>
+        </nav>
+        <!-- Navbar end -->
+
+        <!-- Sidebar overlay -->
+        <div class="sidebar-overlay" onclick="halfmoon.toggleSidebar()"></div>
+
+        <!-- Sidebar start -->
+        <div class="sidebar" style="width: 200px;">
+            <div class="sidebar-menu">
+                <a href="#" class="sidebar-brand font-weight-bold">
+                    <img src="images/logo.png" alt="...">
+                    Vibin
+                </a>
+                <a href="index.html" class="sidebar-link sidebar-link-with-icon ">
+                    <span class="sidebar-icon">
+                        <iconify-icon icon="material-symbols:home-rounded"></iconify-icon>
+                    </span>
+                    Home
+                </a>
+                <a href="places.html" class="sidebar-link sidebar-link-with-icon">
+                    <span class="sidebar-icon">
+                        <iconify-icon icon="mdi:world"></iconify-icon>
+                    </span>
+                    Places
+                </a>
+                <a href="#" class="sidebar-link sidebar-link-with-icon">
+                    <span class="sidebar-icon">
+                        <iconify-icon icon="tabler:ticket"></iconify-icon>
+                    </span>
+                    Plans
+                </a>
+                <a href="#" class="sidebar-link sidebar-link-with-icon">
+                    <span class="sidebar-icon">
+                        <iconify-icon icon="gridicons:create"></iconify-icon>
+                    </span>
+                    Create
+                </a>
+                <a href="#" class="sidebar-link sidebar-link-with-icon">
+                    <span class="sidebar-icon">
+                        <iconify-icon icon="mdi:face-man-profile"></iconify-icon>
+                    </span>
+                    Profile
+                </a>
+                <a href="#" class="sidebar-link sidebar-link-with-icon">
+                    <span class="sidebar-icon">
+                        <iconify-icon icon="uil:info-circle"></iconify-icon>
+                    </span>
+                    About
+                </a>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <a href="#" class="sidebar-link sidebar-link-with-icon">
+                    <span class="sidebar-icon">
+                        <iconify-icon icon="uil:signout"></iconify-icon>
+                    </span>
+                    Logout
+                </a>
+            </div>
+        </div>
+        <!-- Sidebar end -->
+
+
+        <!-- Content wrapper start -->
+        <div class="content-wrapper">
+            <div class="container-fluid">
+                <div class="row row-eq-spacing-lg">
+                    <div class="col-lg-9 ">
+                        <div class="header-place m-10 ">
+                            <h5 style="color: 646363; ">Hey, Dhairya!</h5>
+                            <h2 style="font-weight: bolder;">Explore India & World</h2>
+                        </div>
+                        <div class="places-cards">
+                            <div class=" places d-flex flex-wrap justify-content-center">
+                                <div class="rounded w-300 mw-full m-20 d-inline-flex ">
+                                    <div class="main-card">
+                                        <img src="images/unsplash_eU4pipU_8HA.png" class="img-fluid rounded" alt="...">
+                                        <div class=" m-5 d-inline-block w-three-quarter text-truncate ">
+                                            <p class=" m-0 font-weight-bolder font-size-20">
+                                                Explore'O Mumbai
+                                            </p>
+                                            <p style="color: #AA81F3;"
+                                                class="font-size-14 mt-0 mb-0 font-weight-semi-bold">
+                                                Mumbaiker Nikhil
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rounded w-300 mw-full m-20 d-inline-flex ">
+                                    <div class="main-card">
+                                        <img src="images/unsplash_eU4pipU_8HA.png" class="img-fluid rounded" alt="...">
+                                        <div class=" m-5 d-inline-block w-three-quarter text-truncate ">
+                                            <p class=" m-0 font-weight-bolder font-size-20">
+                                                Explore'O Mumbai
+                                            </p>
+                                            <p style="color: #AA81F3;"
+                                                class="font-size-14 mt-0 mb-0 font-weight-semi-bold">
+                                                Mumbaiker Nikhil
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rounded w-300 mw-full m-20 d-inline-flex">
+                                    <div class="main-card">
+                                        <img src="images/unsplash_eU4pipU_8HA.png" class="img-fluid rounded" alt="...">
+                                        <div class=" m-5 d-inline-block w-three-quarter text-truncate ">
+                                            <p class=" m-0 font-weight-bolder font-size-20">
+                                                Explore'O Mumbai
+                                            </p>
+                                            <p style="color: #AA81F3;"
+                                                class="font-size-14 mt-0 mb-0 font-weight-semi-bold">
+                                                Mumbaiker Nikhil
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header-place m-10 ">
+                            <h2 style="font-weight: bolder;">Plans for You</h2>
+                        </div>
+                        <div class=" plans d-flex flex-wrap justify-content-center">
+                            <div class="position-relative w-300 mw-full h-200 m-20 d-inline-flex">
+                                <img class="rounded h-full" src="images/unsplash_eU4pipU_8HA.png" alt="">
+                                <div class="position-absolute w-auto h-auto right-0 m-10 bg-white rounded ">
+                                    <p class=" font-weight-bold font-size-14 text-center mx-10 m-5">
+                                        3-4 Days
+                                    </p>
+                                </div>
+                                <div class="w-full h-50 position-absolute bottom-0 bg-white rounded-bottom ">
+                                    <div
+                                        class="h-full mx-15 mr-5 align-self-center rounded d-flex align-items-center justify-content-left d-inline-flex">
+                                        <img style="width: 35px;height: 35px;" class="d-block rounded-profile"
+                                            src="images/influ.png" alt="">
+                                    </div>
+                                    <div
+                                        class=" m-5 d-inline-block position-absolute top-0 w-three-quarter text-truncate ">
+                                        <p style="color: #AA81F3;" class=" m-0 font-weight-bold">
+                                            Explore'O Mumbai
+                                        </p>
+                                        <p style="color: #646363;" class="font-size-12 mt-0 mb-0 font-weight-semi-bold">
+                                            Mumbaiker Nikhil
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="position-relative w-300 mw-full h-200 m-20 d-inline-flex">
+                                <img class="rounded h-full" src="images/unsplash_eU4pipU_8HA.png" alt="">
+                                <div class="position-absolute w-auto h-auto right-0 m-10 bg-white rounded ">
+                                    <p class=" font-weight-bold font-size-14 text-center mx-10 m-5">
+                                        3-4 Days
+                                    </p>
+                                </div>
+                                <div class="w-full h-50 position-absolute bottom-0 bg-white rounded-bottom ">
+                                    <div
+                                        class="h-full mx-15 mr-5 align-self-center rounded d-flex align-items-center justify-content-left d-inline-flex">
+                                        <img style="width: 35px;height: 35px;" class="d-block rounded-profile"
+                                            src="images/influ.png" alt="">
+                                    </div>
+                                    <div
+                                        class=" m-5 d-inline-block position-absolute top-0 w-three-quarter text-truncate ">
+                                        <p style="color: #AA81F3;" class=" m-0 font-weight-bold">
+                                            Explore'O Mumbai
+                                        </p>
+                                        <p style="color: #646363;" class="font-size-12 mt-0 mb-0 font-weight-semi-bold">
+                                            Mumbaiker Nikhil
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="position-relative w-300 mw-full h-200 m-20 d-inline-flex">
+                                <img class="rounded h-full" src="images/unsplash_eU4pipU_8HA.png" alt="">
+                                <div class="position-absolute w-auto h-auto right-0 m-10 bg-white rounded ">
+                                    <p class=" font-weight-bold font-size-14 text-center mx-10 m-5">
+                                        3-4 Days
+                                    </p>
+                                </div>
+                                <div class="w-full h-50 position-absolute bottom-0 bg-white rounded-bottom ">
+                                    <div
+                                        class="h-full mx-15 mr-5 align-self-center rounded d-flex align-items-center justify-content-left d-inline-flex">
+                                        <img style="width: 35px;height: 35px;" class="d-block rounded-profile"
+                                            src="images/influ.png" alt="">
+                                    </div>
+                                    <div
+                                        class=" m-5 d-inline-block position-absolute top-0 w-three-quarter text-truncate ">
+                                        <p style="color: #AA81F3;" class=" m-0 font-weight-bold">
+                                            Explore'O Mumbai
+                                        </p>
+                                        <p style="color: #646363;" class="font-size-12 mt-0 mb-0 font-weight-semi-bold">
+                                            Mumbaiker Nikhil
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 d-none d-lg-block bg-white ">
+                        <div class="content">
+                            <h2 style="font-weight: bolder;">Featured :</h2>
+                            <hr>
+                            <div style="background-color: transparent; border: none;  " class="card p-0 di">
+                                <!-- p-0 = padding: 0 -->
+                                <img src="images/influ.png" class="img-fluid rounded-top" alt="...">
+                                <!-- rounded-top = rounded corners on the top -->
+                                <!-- Nested content container inside card -->
+                                <div class="content m-5">
+                                    <h2 class="content-title font-weight-bold m-0">
+                                        Mumbaiker Nikhil
+                                    </h2>
+                                    <p style="color: #AA81F3;" class="font-weight-semi-bold m-0">
+                                        Mumbai, India
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="overflow-x-hidden overflow-y-scroll w-full h-300">
+
+                                <a href="" style="background-color: #f7f2fe"
+                                    class="card w-full h-auto mw-full m-0 p-0 d-flex border-0 m-5 " target="_blank"
+                                    rel="noopener">
+                                    <div class="w-50 h-50 m-10 align-self-center ">
+                                        <div class="w-50 h-50 rounded d-flex align-items-center justify-content-center">
+                                            <img class="w-50 h-50" src="images/influ.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="flex-grow-1 overflow-y-hidden d-flex align-items-center position-relative h-120">
+                                        <div class="p-10 w-full m-auto">
+                                            <h2 class="content-title m-0 d-flex text-truncate  ">
+                                                Mumbaiker Nikhil
+                                            </h2>
+                                            <p style="color: #AA81F3;" class="font-weight-semi-bold m-0">
+                                                Mumbai, India
+                                            </p>
+                                        </div>
+                                        <div class="sponsor-section-card-scroll-block"></div>
+                                    </div>
+                                </a>
+
+                                <a href="" style="background-color: #f7f2fe"
+                                    class="card w-full h-auto mw-full m-0 p-0 d-flex border-0 m-5 " target="_blank"
+                                    rel="noopener">
+                                    <div class="w-50 h-50 m-10 align-self-center ">
+                                        <div class="w-50 h-50 rounded d-flex align-items-center justify-content-center">
+                                            <img class="w-50 h-50" src="images/influ.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="flex-grow-1 overflow-y-hidden d-flex align-items-center position-relative h-120">
+                                        <div class="p-10 w-full m-auto">
+                                            <h2 class="content-title m-0 d-flex text-truncate  ">
+                                                Mumbaiker Nikhil
+                                            </h2>
+                                            <p style="color: #AA81F3;" class="font-weight-semi-bold m-0">
+                                                Mumbai, India
+                                            </p>
+                                        </div>
+                                        <div class="sponsor-section-card-scroll-block"></div>
+                                    </div>
+                                </a>
+
+                                <a href="" style="background-color: #f7f2fe"
+                                    class="card w-full h-auto mw-full m-0 p-0 d-flex border-0 m-5 " target="_blank"
+                                    rel="noopener">
+                                    <div class="w-50 h-50 m-10 align-self-center ">
+                                        <div class="w-50 h-50 rounded d-flex align-items-center justify-content-center">
+                                            <img class="w-50 h-50" src="images/influ.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="flex-grow-1 overflow-y-hidden d-flex align-items-center position-relative h-120">
+                                        <div class="p-10 w-full m-auto">
+                                            <h2 class="content-title m-0 d-flex text-truncate  ">
+                                                Mumbaiker Nikhil
+                                            </h2>
+                                            <p style="color: #AA81F3;" class="font-weight-semi-bold m-0">
+                                                Mumbai, India
+                                            </p>
+                                        </div>
+                                        <div class="sponsor-section-card-scroll-block"></div>
+                                    </div>
+                                </a>
+
+                                <a href="" style="background-color: #f7f2fe"
+                                    class="card w-full h-auto mw-full m-0 p-0 d-flex border-0 m-5 " target="_blank"
+                                    rel="noopener">
+                                    <div class="w-50 h-50 m-10 align-self-center ">
+                                        <div class="w-50 h-50 rounded d-flex align-items-center justify-content-center">
+                                            <img class="w-50 h-50" src="images/influ.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="flex-grow-1 overflow-y-hidden d-flex align-items-center position-relative h-120">
+                                        <div class="p-10 w-full m-auto">
+                                            <h2 class="content-title m-0 d-flex text-truncate  ">
+                                                Mumbaiker Nikhil
+                                            </h2>
+                                            <p style="color: #AA81F3;" class="font-weight-semi-bold m-0">
+                                                Mumbai, India
+                                            </p>
+                                        </div>
+                                        <div class="sponsor-section-card-scroll-block"></div>
+                                    </div>
+                                </a>
+
+                                <a href="" style="background-color: #f7f2fe"
+                                    class="card w-full h-auto mw-full m-0 p-0 d-flex border-0 m-5 " target="_blank"
+                                    rel="noopener">
+                                    <div class="w-50 h-50 m-10 align-self-center ">
+                                        <div class="w-50 h-50 rounded d-flex align-items-center justify-content-center">
+                                            <img class="w-50 h-50" src="images/influ.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="flex-grow-1 overflow-y-hidden d-flex align-items-center position-relative h-120">
+                                        <div class="p-10 w-full m-auto">
+                                            <h2 class="content-title m-0 d-flex text-truncate  ">
+                                                Mumbaiker Nikhil
+                                            </h2>
+                                            <p style="color: #AA81F3;" class="font-weight-semi-bold m-0">
+                                                Mumbai, India
+                                            </p>
+                                        </div>
+                                        <div class="sponsor-section-card-scroll-block"></div>
+                                    </div>
+                                </a>
+
+                                <a href="" style="background-color: #f7f2fe"
+                                    class="card w-full h-auto mw-full m-0 p-0 d-flex border-0 m-5 " target="_blank"
+                                    rel="noopener">
+                                    <div class="w-50 h-50 m-10 align-self-center ">
+                                        <div class="w-50 h-50 rounded d-flex align-items-center justify-content-center">
+                                            <img class="w-50 h-50" src="images/influ.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="flex-grow-1 overflow-y-hidden d-flex align-items-center position-relative h-120">
+                                        <div class="p-10 w-full m-auto">
+                                            <h2 class="content-title m-0 d-flex text-truncate  ">
+                                                Mumbaiker Nikhil
+                                            </h2>
+                                            <p style="color: #AA81F3;" class="font-weight-semi-bold m-0">
+                                                Mumbai, India
+                                            </p>
+                                        </div>
+                                        <div class="sponsor-section-card-scroll-block"></div>
+                                    </div>
+                                </a>
+
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Content wrapper end -->
+
+
+
+    </div>
+    <!-- Page wrapper end -->
+
+    <!-- Halfmoon JS -->
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/halfmoon@1.1.1/js/halfmoon.min.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.js"></script>
+
+    <script>
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyBUdp28x94156RaHVBOZWV_flZ2MlHy2EM",
+            authDomain: "vibin-436a7.firebaseapp.com",
+            projectId: "vibin-436a7",
+            storageBucket: "vibin-436a7.appspot.com",
+            messagingSenderId: "932607890943",
+            appId: "1:932607890943:web:d0a03ef35385fda1b403ca",
+            measurementId: "G-54J34FWP1C"
+        };
+        // Initialize Firebase
+        let app = firebase.initializeApp(firebaseConfig);
+
+        const db = firebase.firestore();
+        const placesCollection = db.collection("places");
+
+        function showplaces(places) {
+            document.querySelector(".places").innerHTML = ""
+            places.forEach((place) => {
+
+
+                document.querySelector(".places").innerHTML += `    <div class="rounded w-300 mw-full m-20 d-inline-flex">
+        <div class=""> <!-- p-0 = padding: 0 -->
+            <img src="${place.item.img[0]}" class="img-fluid rounded" alt="...">
+            <div class=" m-5 d-inline-block w-three-quarter text-truncate ">
+                <p class=" m-0 font-weight-bolder font-size-20">
+                    ${place.item.Name}
+                </p>
+                <p style="color: #3CA6B9;" class="font-size-14 mt-0 mb-0 font-weight-semi-bold">
+                    ${place.item.Location}
+                </p>
+            </div>
+        </div>
+    </div>`
+
+            });
+        }
+        placesCollection.limit(3).get().then((querySnapshot) => {
+            const alllocations = []
+            querySnapshot.forEach((doc) => {
+                console.log(doc.id, " => ", doc.data());
+                const place = doc.data()
+                alllocations.push(place)
+
+            });
+
+            const options = {
+                keys: [
+                    "Name",
+                    "Location"
+                ]
+            };
+            console.log(alllocations)
+            const fuse = new Fuse(alllocations, options);
+            showplaces(fuse.search('india'))
+        });
+    </script>
+
+</body>
+
+</html>
